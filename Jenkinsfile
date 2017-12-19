@@ -12,7 +12,7 @@ node('me') {
     
     stage('war_and_archive'){
         bat 'gradle war'
-        archiveArtifacts '/*.war'
+        archiveArtifacts 'build/libs//*.war'
     }
     
 }
