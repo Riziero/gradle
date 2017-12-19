@@ -7,7 +7,12 @@ node('me') {
     }
     
     stage('echo'){
-        echo 'We are done!'
+        echo 'King is cool!'
+    }
+    
+    stage('war_and_archive'){
+        bat 'gradle war'
+        archiveArtifacts '/*.war'
     }
     
 }
