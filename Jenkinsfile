@@ -4,7 +4,7 @@ node('me') {
     stage ('Clone') {
         checkout scm 
         bat 'gradle clean test'
-	junit '**/target/*.xml'
+        junit '**/build/test-results/**/TEST-*.xml'
     }
     
     stage('echo'){
